@@ -1,0 +1,83 @@
+﻿@model TagHelpersViewModel
+@{
+    ViewData["Title"] = "Data Types";
+}
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Index" asp-controller="TagHelpers">
+            <div class="form-group">
+                <label asp-for="Boolean"></label>
+                <input class="form-check" asp-for="Boolean" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Byte"></label>
+                <input class="form-control" asp-for="Byte" />
+            </div>
+            <div class="form-group">
+                <label asp-for="DateTime"></label>
+                <input class="form-control" asp-for="DateTime" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Decimal"></label>
+                <input class="form-control" asp-for="Decimal" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Decimal">Decimal with 000.000 format</label>
+                <input class="form-control" asp-for="Decimal" asp-format="000.000" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Double"></label>
+                <input class="form-control" asp-for="Double" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input class="form-control" asp-for="Email" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Float"></label>
+                <input class="form-control" asp-for="Float" />
+            </div>
+            <div class="form-group">
+                <label asp-for="HiddenInput"></label>
+                <input class="form-control" asp-for="HiddenInput" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Int"></label>
+                <input class="form-control" asp-for="Int" />
+            </div>
+            <div class="form-group">
+                <label asp-for="IntAsText"></label>
+                <input class="form-control" asp-for="IntAsText" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input class="form-control" asp-for="Password" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone"></label>
+                <input class="form-control" asp-for="Phone" />
+            </div>
+            <div class="form-group">
+                <label asp-for="String"></label>
+                <input class="form-control" asp-for="String" />
+            </div>
+            <div class="form-group">
+                <label asp-for="StringAsDate"></label>
+                <input class="form-control" asp-for="StringAsDate" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Url"></label>
+                <input class="form-control" asp-for="Url" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Multiline"></label>
+                <textarea class="form-control" asp-for="Multiline"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+
+            <div asp-validation-summary="All"></div>
+</form>
+
+@section Scripts{
+    @Html.Partial("_ValidationScriptsPartial")
+}
